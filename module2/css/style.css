@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+		margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    color: white;
+    flex: 1; /* Default for flexbox layout */
+}
+
+.chicken {
+    background-color: #FF6347; /* Tomato */
+}
+
+.beef {
+    background-color: #8B0000; /* Dark Red */
+}
+
+.sushi {
+    background-color: #4682B4; /* Steel Blue */
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .chicken, .beef {
+        flex: 1 1 48%; /* First two sections on the first row */
+    }
+    .sushi {
+        flex: 1 1 100%; /* Third section on second row */
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        flex: 1 1 100%; /* Full width for all sections */
+    }
+}
